@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sword Master Story - Códigos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #121212;
+            color: white;
+        }
+        .header {
+            background: url('https://example.com/waifu-image.jpg') no-repeat center center/cover;
+            padding: 50px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .code-box { 
+            border: 1px solid #ffcc00; 
+            padding: 10px; 
+            margin: 10px; 
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .comments {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Sword Master Story - Códigos y Cupones</div>
+    
+    <h2>Códigos Disponibles</h2>
+    <div id="codes">
+        <div class="code-box">Código: ABC123</div>
+        <div class="code-box">Código: XYZ789</div>
+    </div>
+    
+    <div class="comments">
+        <h2>Comentarios</h2>
+        <textarea id="comment" placeholder="Escribe tu comentario aquí..."></textarea>
+        <button onclick="addComment()">Enviar</button>
+        <div id="comment-section"></div>
+    </div>
+
+    <script>
+        function addComment() {
+            let commentText = document.getElementById('comment').value;
+            if (commentText.trim() !== '') {
+                let commentDiv = document.createElement('div');
+                commentDiv.textContent = commentText;
+                document.getElementById('comment-section').appendChild(commentDiv);
+                document.getElementById('comment').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
